@@ -9,14 +9,12 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 import java.util.Optional;
 
-@Service
 public class MemberService {
 
 //    private final MemberRepository memberRepository = new MemoryMemberRepository(); // 다른 인스턴스 사용(테스트 코드 참고)
 
     private final MemberRepository memberRepository; // 같은 인스턴스 사용
 
-    @Autowired
     public MemberService(MemberRepository memberRepository) {
         this.memberRepository = memberRepository; // 외부에서 넣어주도록 변경
     }
